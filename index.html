@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Mr. Potato Head</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="bg-light d-flex">
+      <button id="partButton" class="btn btn-sm btn-rounded bg-primary text-white"
+        onclick="togglePart('body', this)">Body</button>
+      <button id="partButton" class="btn btn-sm btn-rounded bg-primary text-white"
+        onclick="togglePart('eyes', this)">Eyes</button>
+      <button id="partButton" class="btn btn-sm btn-rounded bg-primary text-white"
+        onclick="togglePart('mouth', this)">Mouth</button>
+      <button id="partButton" class="btn btn-sm btn-rounded bg-primary text-white"
+        onclick="togglePart('nose', this)">Nose</button>
+      <button id="partButton" class="btn btn-sm btn-rounded bg-primary text-white"
+        onclick="togglePart('hat', this)">Hat</button>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <button class="btn btn-sm btn-rounded nav-link" onclick="getScreenShot(2)">Capture Image</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-sm btn-rounded nav-link" onclick="getScreenShot(1)">Save Image</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="canvas">
+    <img class="draggable-element" id="body"
+      src="https://media.discordapp.net/attachments/1063217265580965971/1168600122293227702/body.png?ex=65525aac&is=653fe5ac&hm=06a24ba517471e76a43c8f5a2998fe1080bf6857e241e3450a3d09a2573f2358&=&width=888&height=930"
+      alt="">
+    <img class="draggable-element" id="eyes"
+      src="https://media.discordapp.net/attachments/1063217265580965971/1168600122750402580/eyes.png?ex=65525aac&is=653fe5ac&hm=8b3578df005aa07f996a3b76bca8121be2294bf73d09cea300721d4f6b648888&=&width=391&height=354"
+      alt="">
+    <img class="draggable-element" id="mouth"
+      src="https://media.discordapp.net/attachments/1063217265580965971/1168600123853508670/mouth.png?ex=65525aad&is=653fe5ad&hm=1b75bcbff6728fcd8b3dc9fa7300cfc0906af5895a9cf22478bc3f83b6833bf4&=&width=475&height=156"
+      alt="">
+    <img class="draggable-element" id="nose"
+      src="https://media.discordapp.net/attachments/1063217265580965971/1168600124348432454/nose.png?ex=65525aad&is=653fe5ad&hm=41dfcca217430fe03ff97c7c836281774944d3c09417e569ad0871ed1908c252&=&width=266&height=233"
+      alt="">
+    <img class="draggable-element" id="hat"
+      src="https://media.discordapp.net/attachments/1063217265580965971/1168600123031437332/hat.png?ex=65525aac&is=653fe5ac&hm=f8b3a1cd6d277a706ad3bf23af0f69d0c9a6e9f4016181148992b4d3afb48ad3&=&width=794&height=321"
+      alt="">
+  </div>
+
+  <div style="display: none;" id="capture">
+  </div>
+
+  <div class='button-container'>
+    <button class='close-button'>X</button>
+  </div>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>

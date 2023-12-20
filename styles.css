@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  background-color: rgb(224, 224, 224);
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.selected {
+  border-radius: 25px;
+  background: #73ad21;
+  padding: 20px;
+}
+
+.menu {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu div {
+  display: flex;
+  gap: 10px;
+}
+
+.draggable-element {
+  width: auto;
+  position: absolute;
+}
+
+#body,
+#eyes,
+#nose,
+#hat {
+  object-fit: contain;
+}
+
+#canvas {
+  max-width: 100vw;
+  max-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#capture {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding: 10px;
+  width: 300px;
+  height: auto;
+  z-index: 1;
+}
+
+.capture-visible {
+  display: inline;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#capture-img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #d1d1d1;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+.close-button {
+  width: 30px;
+  height: 30px;
+  background-color: #f00;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+#partButton {
+  margin-right: 10px;
+}
+
+#partButton:last-child {
+  margin-right: 0;
+}
